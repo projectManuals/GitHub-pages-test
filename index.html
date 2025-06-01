@@ -1,60 +1,172 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA Advisory Circulars - Project Manuals</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .ai-access-section {
+            background-color: #e3f2fd;
+            border: 2px solid #1976d2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .pdf-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-left: 4px solid #007cba;
+        }
+        .pdf-link {
+            display: inline-block;
+            background-color: #007cba;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 8px 0;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        .pdf-link:hover {
+            background-color: #005a87;
+        }
+        .copy-link {
+            font-family: monospace;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 8px;
+            margin: 5px 0;
+            font-size: 12px;
+            word-break: break-all;
+            cursor: pointer;
+            display: block;
+        }
+        .copy-link:hover {
+            background-color: #e9ecef;
+        }
+        .file-info {
+            font-size: 0.9em;
+            color: #666;
+            margin: 10px 0;
+        }
+        .category-title {
+            color: #003366;
+            border-bottom: 2px solid #007cba;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-  <p>------------</p>
+    <div class="header">
+        <h1>CASA Advisory Circulars</h1>
+        <p>Australian Civil Aviation Safety Authority - Official Guidance Documents</p>
+    </div>
 
-  <h1>ACs</h1>
-<a href="advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf">advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf</a><br>
-<a href="advisory-circular-01-03-transitioning-flight-operations-regulations.pdf">advisory-circular-01-03-transitioning-flight-operations-regulations.pdf</a><br>
-<a href="advisory-circular-1-01-understanding-legislative-framework.pdf">advisory-circular-1-01-understanding-legislative-framework.pdf</a><br>
-<a href="advisory-circular-11-02-exemptions-against-casr-car-cao-mos.pdf">advisory-circular-11-02-exemptions-against-casr-car-cao-mos.pdf</a><br>
-<a href="advisory-circular-11-03-electronically-formatted-certifications-records-management-systems.pdf">advisory-circular-11-03-electronically-formatted-certifications-records-management-systems.pdf</a><br>
-<a href="advisory-circular-11-04-approvals-under-casr-parts-91-103-119-121-129-131-132-133-135-138-and-149-including-MOS.pdf">advisory-circular-11-04-approvals-under-casr-parts-91-103-119-121-129-131-132-133-135-138-and-149-including-MOS.pdf</a><br>
-<a href="advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf">advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf</a><br>
-<a href="advisory-circular-119-04-flight-data-analysis-programmes-fdap-for-air-transport-operations.pdf">advisory-circular-119-04-flight-data-analysis-programmes-fdap-for-air-transport-operations.pdf</a><br>
-<a href="advisory-circular-121-03-upset-prevention-recovery-training.pdf">advisory-circular-121-03-upset-prevention-recovery-training.pdf</a><br>
-<a href="advisory-circular-135-13-prescribed-single-engine-aeroplanes.pdf">advisory-circular-135-13-prescribed-single-engine-aeroplanes.pdf</a><br>
-<a href="advisory-circular-171-01-aeronautical-telecommunication-radionavigation-service-providers.pdf">advisory-circular-171-01-aeronautical-telecommunication-radionavigation-service-providers.pdf</a><br>
-<a href="advisory-circular-171-03-guidelines-preparation-safety-management-system.pdf">advisory-circular-171-03-guidelines-preparation-safety-management-system.pdf</a><br>
-<a href="advisory-circular-171-04-software-its-use-in-aeronautical-telecommunication-radio-navigation-services.pdf">advisory-circular-171-04-software-its-use-in-aeronautical-telecommunication-radio-navigation-services.pdf</a><br>
-<a href="advisory-circular-20-03-identification-and-management-of-aeronautical-products.pdf">advisory-circular-20-03-identification-and-management-of-aeronautical-products.pdf</a><br>
-<a href="advisory-circular-45-01-nationality-registration-marks.pdf">advisory-circular-45-01-nationality-registration-marks.pdf</a><br>
-<a href="advisory-circular-47-01-registration-aircraft-related-matters.pdf">advisory-circular-47-01-registration-aircraft-related-matters.pdf</a><br>
-<a href="advisory-circular-47-02-convention-international-interests-mobile-equipment.pdf">advisory-circular-47-02-convention-international-interests-mobile-equipment.pdf</a><br>
-<a href="advisory-circular-61-08-teaching-assessing-non-technical-skills-for-single-pilot-operations.pdf">advisory-circular-61-08-teaching-assessing-non-technical-skills-for-single-pilot-operations.pdf</a><br>
-<a href="advisory-circular-61-20-pilot-supervision-and-mentoring.pdf">advisory-circular-61-20-pilot-supervision-and-mentoring.pdf</a><br>
-<a href="advisory-circular-91-02-guidelines-for-aeroplanes-with-mtow-not-exceeding-5700-kg-suitable-places-to-take-off-and-land_0.pdf">advisory-circular-91-02-guidelines-for-aeroplanes-with-mtow-not-exceeding-5700-kg-suitable-places-to-take-off-and-land_0.pdf</a>
-<a href="advisory-circular-91-03-carriage-assistance-animals.pdf">advisory-circular-91-03-carriage-assistance-animals.pdf</a><br>
-<a href="advisory-circular-91-05-performance-based-navigation.pdf">advisory-circular-91-05-performance-based-navigation.pdf</a><br>
-<a href="advisory-circular-91-06-performance-based-communication-surveillance.pdf">advisory-circular-91-06-performance-based-communication-surveillance.pdf</a><br>
-<a href="advisory-circular-91-07-cabin-electronic-flight-bags.pdf">advisory-circular-91-07-cabin-electronic-flight-bags.pdf</a><br>
-<a href="advisory-circular-91-10-operations-vicinity-noncontrolled-aerodromes.pdf">advisory-circular-91-10-operations-vicinity-noncontrolled-aerodromes.pdf</a><br>
-<a href="advisory-circular-91-11-aeroplane-low-visibility-conduct-approvals.pdf">advisory-circular-91-11-aeroplane-low-visibility-conduct-approvals.pdf</a><br>
-<a href="advisory-circular-91-12-conduct-of-practice-autoland-operations.pdf">advisory-circular-91-12-conduct-of-practice-autoland-operations.pdf</a><br>
-<a href="advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf">advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf</a><br>
-<a href="advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf">advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf</a><br>
-<a href="advisory-circular-91-16-wake-turbulence.pdf">advisory-circular-91-16-wake-turbulence.pdf</a><br>
-<a href="advisory-circular-91-17-electronic-flight-bags.pdf">advisory-circular-91-17-electronic-flight-bags.pdf</a><br>
-<a href="advisory-circular-91-18-restraints-infants-children.PDF">advisory-circular-91-18-restraints-infants-children.PDF</a><br>
-<a href="advisory-circular-91-22-aircraft-checklist.pdf">advisory-circular-91-22-aircraft-checklist.pdf</a><br>
-<a href="advisory-circular-91-23-ads-b-enhancing-situational-awareness.pdf">advisory-circular-91-23-ads-b-enhancing-situational-awareness.pdf</a><br>
-<a href="advisory-circular-91-25-fuel-oil-safety.pdf">advisory-circular-91-25-fuel-oil-safety.pdf</a><br>
-<a href="advisory-circular-91-28-crew-safety-during-turbulence.pdf">advisory-circular-91-28-crew-safety-during-turbulence.pdf</a><br>
-<a href="advisory-circular-92-02-dangerous-goods-manuals.pdf">advisory-circular-92-02-dangerous-goods-manuals.pdf</a><br>
-<a href="advisory-circular-ac-1-04-registered-operator-responsibilities-for-continuing-airworthiness.pdf">advisory-circular-ac-1-04-registered-operator-responsibilities-for-continuing-airworthiness.pdf</a><br>
-<a href="multi-part-advisory-circular-119-07-138-03-management-change-for-air-transport-and-aerial-work-operators.pdf">multi-part-advisory-circular-119-07-138-03-management-change-for-air-transport-and-aerial-work-operators.pdf</a><br>
-<a href="multi-part-advisory-circular-119-11-ac-138-02-training-checking-systems.pdf">multi-part-advisory-circular-119-11-ac-138-02-training-checking-systems.pdf</a><br>
-<a href="multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights-2.pdf">multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights-2.pdf</a><br>
-<a href="multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights.pdf">multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights.pdf</a><br>
-<a href="multi-part-advisory-circular-121-08-ac-133-08-ac-135-06-carry-on-baggage.pdf">multi-part-advisory-circular-121-08-ac-133-08-ac-135-06-carry-on-baggage.pdf</a><br>
-<a href="multi-part-advisory-circular-121-09-ac-133-06-ac-135-10-carriage-special-category-passenger.pdf">multi-part-advisory-circular-121-09-ac-133-06-ac-135-10-carriage-special-category-passenger.pdf</a><br>
-<a href="multi-part-advisory-circular-121-10-ac-133-07-ac-135-11-passengers-seated-emergency-exit.pdf">multi-part-advisory-circular-121-10-ac-133-07-ac-135-11-passengers-seated-emergency-exit.pdf</a><br>
-<a href="multi-part-advisory-circular-139-05-171-05-172-03-all-weather-operations-aerodromes.pdf">multi-part-advisory-circular-139-05-171-05-172-03-all-weather-operations-aerodromes.pdf</a><br>
-<a href="multi-part-advisory-circular-91-19-ac-121-04-ac-133-10-ac-135-12-ac-138-10-passenger-safety-information.pdf">multi-part-advisory-circular-91-19-ac-121-04-ac-133-10-ac-135-12-ac-138-10-passenger-safety-information.pdf</a><br>
-<a href="multi-part-advisory-circular-91-30-ac-121-12-ac-133-03-ac-135-14-emergency-locator-transmitters.pdf">multi-part-advisory-circular-91-30-ac-121-12-ac-133-03-ac-135-14-emergency-locator-transmitters.pdf</a><br>
-<a href="multi-part-advisory-circular-91-32-and-139-22-global-reporting-format-runway-surface-condition.pdf">multi-part-advisory-circular-91-32-and-139-22-global-reporting-format-runway-surface-condition.pdf</a>
+    <div class="ai-access-section">
+        <h2>🤖 AI Document Analysis Links</h2>
+        <p><strong>For AI Tools:</strong> Copy and paste any link below to enable full document reading and analysis</p>
+    </div>
 
+    <div class="pdf-grid">
+        <div class="pdf-card">
+            <h3 class="category-title">Legislative Framework</h3>
+            <h4>AC 1-01: Understanding the Legislative Framework</h4>
+            <div class="file-info">Explains the relationship between Australian aviation legislation and ICAO rules</div>
+            <a href="advisory-circular-1-01-understanding-legislative-framework.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-1-01-understanding-legislative-framework.pdf</div>
+        </div>
+
+        <div class="pdf-card">
+            <h3 class="category-title">Operations Manuals</h3>
+            <h4>AC 01-02: Guide to Preparation of Operations Manuals</h4>
+            <div class="file-info">Guidance for developing aviation operations manuals and expositions</div>
+            <a href="advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf</div>
+        </div>
+
+        <div class="pdf-card">
+            <h3 class="category-title">Regulatory Transition</h3>
+            <h4>AC 01-03: Transitioning to Flight Operations Regulations</h4>
+            <div class="file-info">Advice on CASR regulations for flight operations transitions</div>
+            <a href="advisory-circular-01-03-transitioning-flight-operations-regulations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-01-03-transitioning-flight-operations-regulations.pdf</div>
+        </div>
+
+        <div class="pdf-card">
+            <h3 class="category-title">Safety Management</h3>
+            <h4>AC 119-01: Safety Management Systems</h4>
+            <div class="file-info">Guidelines for implementing SMS in air transport operations</div>
+            <a href="advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf</div>
+        </div>
+
+        <div class="pdf-card">
+            <h3 class="category-title">Flight Operations</h3>
+            <h4>AC 91-14: Pilot's Responsibility for Collision Avoidance</h4>
+            <div class="file-info">Guidance on pilot responsibilities for avoiding mid-air collisions</div>
+            <a href="advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf</div>
+        </div>
+
+        <div class="pdf-card">
+            <h3 class="category-title">Fuel Requirements</h3>
+            <h4>AC 91-15: Guidelines for Aircraft Fuel Requirements</h4>
+            <div class="file-info">Fuel planning and requirements for aircraft operations</div>
+            <a href="advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf</div>
+        </div>
+    </div>
+
+    <div class="ai-access-section">
+        <h3>How to Use with AI Tools:</h3>
+        <ol>
+            <li>Click on any gray link box above to copy the URL</li>
+            <li>Paste the copied link directly into your AI conversation</li>
+            <li>The AI will then be able to download and analyze the full PDF content</li>
+        </ol>
+        <p><strong>Note:</strong> Make sure all PDF files are uploaded to the same directory as this index.html file</p>
+    </div>
+
+    <script>
+        function copyToClipboard(element) {
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(function() {
+                const originalBg = element.style.backgroundColor;
+                element.style.backgroundColor = '#d4edda';
+                element.style.borderColor = '#c3e6cb';
+                setTimeout(() => {
+                    element.style.backgroundColor = originalBg;
+                    element.style.borderColor = '#dee2e6';
+                }, 1000);
+            });
+        }
+    </script>
 </body>
 </html>
