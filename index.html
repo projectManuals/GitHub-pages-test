@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASA Advisory Circulars - Project Manuals</title>
+    <title>CASA Advisory Circulars - Complete Collection</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             line-height: 1.6;
@@ -30,14 +30,14 @@
         }
         .pdf-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
             margin: 30px 0;
         }
         .pdf-card {
             background-color: white;
             border-radius: 8px;
-            padding: 20px;
+            padding: 15px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-left: 4px solid #007cba;
         }
@@ -45,11 +45,11 @@
             display: inline-block;
             background-color: #007cba;
             color: white;
-            padding: 8px 16px;
+            padding: 6px 12px;
             text-decoration: none;
             border-radius: 4px;
-            margin: 8px 0;
-            font-size: 14px;
+            margin: 5px 0;
+            font-size: 13px;
             transition: background-color 0.3s;
         }
         .pdf-link:hover {
@@ -60,9 +60,9 @@
             background-color: #f8f9fa;
             border: 1px solid #dee2e6;
             border-radius: 4px;
-            padding: 8px;
+            padding: 6px;
             margin: 5px 0;
-            font-size: 12px;
+            font-size: 11px;
             word-break: break-all;
             cursor: pointer;
             display: block;
@@ -71,87 +71,464 @@
             background-color: #e9ecef;
         }
         .file-info {
-            font-size: 0.9em;
+            font-size: 0.85em;
             color: #666;
-            margin: 10px 0;
+            margin: 8px 0;
         }
         .category-title {
             color: #003366;
             border-bottom: 2px solid #007cba;
             padding-bottom: 5px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .file-size {
+            font-size: 0.8em;
+            color: #999;
+            float: right;
+        }
+        .search-box {
+            width: 100%;
+            padding: 12px;
+            margin: 20px 0;
+            border: 2px solid #007cba;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .stats {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>CASA Advisory Circulars</h1>
+        <h1>CASA Advisory Circulars - Complete Collection</h1>
         <p>Australian Civil Aviation Safety Authority - Official Guidance Documents</p>
     </div>
 
-    <div class="ai-access-section">
-        <h2>🤖 AI Document Analysis Links</h2>
-        <p><strong>For AI Tools:</strong> Copy and paste any link below to enable full document reading and analysis</p>
+    <div class="stats">
+        <strong>📁 Total Documents: 47 PDF Files</strong> | 
+        <strong>📊 Total Size: ~45.2 MB</strong> | 
+        <strong>🔄 Last Updated: June 1, 2025</strong>
     </div>
 
-    <div class="pdf-grid">
-        <div class="pdf-card">
-            <h3 class="category-title">Legislative Framework</h3>
+    <div class="ai-access-section">
+        <h2>🤖 AI Document Analysis Instructions</h2>
+        <p><strong>For AI Tools:</strong> Click any gray link box below to copy the URL, then paste it into your AI conversation to enable full document reading and analysis.</p>
+        <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search documents by AC number, title, or topic..." onkeyup="filterDocuments()">
+    </div>
+
+    <div class="pdf-grid" id="documentGrid">
+        <!-- Legislative Framework -->
+        <div class="pdf-card" data-search="ac 1-01 legislative framework understanding">
+            <h3 class="category-title">Legislative Framework <span class="file-size">900 KB</span></h3>
             <h4>AC 1-01: Understanding the Legislative Framework</h4>
             <div class="file-info">Explains the relationship between Australian aviation legislation and ICAO rules</div>
             <a href="advisory-circular-1-01-understanding-legislative-framework.pdf" class="pdf-link" target="_blank">Download PDF</a>
             <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-1-01-understanding-legislative-framework.pdf</div>
         </div>
 
-        <div class="pdf-card">
-            <h3 class="category-title">Operations Manuals</h3>
-            <h4>AC 01-02: Guide to Preparation of Operations Manuals</h4>
+        <div class="pdf-card" data-search="ac 1-04 registered operator continuing airworthiness">
+            <h3 class="category-title">Continuing Airworthiness <span class="file-size">326 KB</span></h3>
+            <h4>AC 1-04: Registered Operator Responsibilities for Continuing Airworthiness</h4>
+            <div class="file-info">Requirements for maintaining aircraft airworthiness</div>
+            <a href="advisory-circular-ac-1-04-registered-operator-responsibilities-for-continuing-airworthiness.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-ac-1-04-registered-operator-responsibilities-for-continuing-airworthiness.pdf</div>
+        </div>
+
+        <!-- Operations Manuals -->
+        <div class="pdf-card" data-search="ac 01-02 operations manuals expositions preparation guide">
+            <h3 class="category-title">Operations Manuals <span class="file-size">1.0 MB</span></h3>
+            <h4>AC 01-02: Guide to Preparation of Expositions and Operations Manuals</h4>
             <div class="file-info">Guidance for developing aviation operations manuals and expositions</div>
             <a href="advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf" class="pdf-link" target="_blank">Download PDF</a>
             <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-01-02-guide-preparation-expositions-operations-manuals-2.pdf</div>
         </div>
 
-        <div class="pdf-card">
-            <h3 class="category-title">Regulatory Transition</h3>
+        <div class="pdf-card" data-search="ac 01-03 transitioning flight operations regulations">
+            <h3 class="category-title">Regulatory Transition <span class="file-size">1.5 MB</span></h3>
             <h4>AC 01-03: Transitioning to Flight Operations Regulations</h4>
             <div class="file-info">Advice on CASR regulations for flight operations transitions</div>
             <a href="advisory-circular-01-03-transitioning-flight-operations-regulations.pdf" class="pdf-link" target="_blank">Download PDF</a>
             <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-01-03-transitioning-flight-operations-regulations.pdf</div>
         </div>
 
-        <div class="pdf-card">
-            <h3 class="category-title">Safety Management</h3>
-            <h4>AC 119-01: Safety Management Systems</h4>
-            <div class="file-info">Guidelines for implementing SMS in air transport operations</div>
-            <a href="advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
-            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf</div>
+        <!-- Exemptions and Approvals -->
+        <div class="pdf-card" data-search="ac 11-02 exemptions casr car cao mos">
+            <h3 class="category-title">Exemptions <span class="file-size">427 KB</span></h3>
+            <h4>AC 11-02: Exemptions Against CASR, CAR, CAO, MOS</h4>
+            <div class="file-info">Process for obtaining exemptions from aviation regulations</div>
+            <a href="advisory-circular-11-02-exemptions-against-casr-car-cao-mos.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-11-02-exemptions-against-casr-car-cao-mos.pdf</div>
         </div>
 
-        <div class="pdf-card">
-            <h3 class="category-title">Flight Operations</h3>
+        <div class="pdf-card" data-search="ac 11-03 electronic certifications records management">
+            <h3 class="category-title">Electronic Records <span class="file-size">329 KB</span></h3>
+            <h4>AC 11-03: Electronically Formatted Certifications & Records Management Systems</h4>
+            <div class="file-info">Guidelines for electronic certification and record keeping</div>
+            <a href="advisory-circular-11-03-electronically-formatted-certifications-records-management-systems.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-11-03-electronically-formatted-certifications-records-management-systems.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 11-04 approvals casr parts 91 103 119 121 129 131 132 133 135 138 149">
+            <h3 class="category-title">CASR Approvals <span class="file-size">457 KB</span></h3>
+            <h4>AC 11-04: Approvals Under CASR Parts 91, 103, 119, 121, 129, 131, 132, 133, 135, 138 and 149</h4>
+            <div class="file-info">Comprehensive guide to obtaining various CASR approvals</div>
+            <a href="advisory-circular-11-04-approvals-under-casr-parts-91-103-119-121-129-131-132-133-135-138-and-149-including-MOS.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-11-04-approvals-under-casr-parts-91-103-119-121-129-131-132-133-135-138-and-149-including-MOS.pdf</div>
+        </div>
+
+        <!-- Airworthiness -->
+        <div class="pdf-card" data-search="ac 20-03 aeronautical products identification management">
+            <h3 class="category-title">Airworthiness <span class="file-size">642 KB</span></h3>
+            <h4>AC 20-03: Identification and Management of Aeronautical Products</h4>
+            <div class="file-info">Guidelines for managing and identifying aviation products</div>
+            <a href="advisory-circular-20-03-identification-and-management-of-aeronautical-products.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-20-03-identification-and-management-of-aeronautical-products.pdf</div>
+        </div>
+
+        <!-- Aircraft Registration -->
+        <div class="pdf-card" data-search="ac 45-01 nationality registration marks">
+            <h3 class="category-title">Aircraft Registration <span class="file-size">302 KB</span></h3>
+            <h4>AC 45-01: Nationality and Registration Marks</h4>
+            <div class="file-info">Requirements for aircraft nationality and registration markings</div>
+            <a href="advisory-circular-45-01-nationality-registration-marks.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-45-01-nationality-registration-marks.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 47-01 aircraft registration related matters">
+            <h3 class="category-title">Aircraft Registration <span class="file-size">1.1 MB</span></h3>
+            <h4>AC 47-01: Registration of Aircraft and Related Matters</h4>
+            <div class="file-info">Comprehensive guide to aircraft registration processes</div>
+            <a href="advisory-circular-47-01-registration-aircraft-related-matters.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-47-01-registration-aircraft-related-matters.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 47-02 convention international interests mobile equipment">
+            <h3 class="category-title">International Conventions <span class="file-size">391 KB</span></h3>
+            <h4>AC 47-02: Convention on International Interests in Mobile Equipment</h4>
+            <div class="file-info">International legal framework for mobile equipment interests</div>
+            <a href="advisory-circular-47-02-convention-international-interests-mobile-equipment.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-47-02-convention-international-interests-mobile-equipment.pdf</div>
+        </div>
+
+        <!-- Personnel and Training -->
+        <div class="pdf-card" data-search="ac 61-08 teaching assessing non-technical skills single pilot">
+            <h3 class="category-title">Pilot Training <span class="file-size">536 KB</span></h3>
+            <h4>AC 61-08: Teaching and Assessing Non-Technical Skills for Single Pilot Operations</h4>
+            <div class="file-info">Guidelines for non-technical skills training and assessment</div>
+            <a href="advisory-circular-61-08-teaching-assessing-non-technical-skills-for-single-pilot-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-61-08-teaching-assessing-non-technical-skills-for-single-pilot-operations.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 61-20 pilot supervision mentoring">
+            <h3 class="category-title">Pilot Training <span class="file-size">650 KB</span></h3>
+            <h4>AC 61-20: Pilot Supervision and Mentoring</h4>
+            <div class="file-info">Best practices for pilot supervision and mentoring programs</div>
+            <a href="advisory-circular-61-20-pilot-supervision-and-mentoring.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-61-20-pilot-supervision-and-mentoring.pdf</div>
+        </div>
+
+        <!-- General Flight Operations -->
+        <div class="pdf-card" data-search="ac 91-02 aeroplanes mtow 5700 kg suitable places takeoff land">
+            <h3 class="category-title">Flight Operations <span class="file-size">851 KB</span></h3>
+            <h4>AC 91-02: Guidelines for Aeroplanes with MTOW Not Exceeding 5700 kg - Suitable Places to Take Off and Land</h4>
+            <div class="file-info">Guidance on suitable places for light aircraft operations</div>
+            <a href="advisory-circular-91-02-guidelines-for-aeroplanes-with-mtow-not-exceeding-5700-kg-suitable-places-to-take-off-and-land_0.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-02-guidelines-for-aeroplanes-with-mtow-not-exceeding-5700-kg-suitable-places-to-take-off-and-land_0.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-03 carriage assistance animals">
+            <h3 class="category-title">Flight Operations <span class="file-size">344 KB</span></h3>
+            <h4>AC 91-03: Carriage of Assistance Animals</h4>
+            <div class="file-info">Requirements for transporting assistance animals</div>
+            <a href="advisory-circular-91-03-carriage-assistance-animals.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-03-carriage-assistance-animals.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-05 performance based navigation pbn">
+            <h3 class="category-title">Navigation <span class="file-size">1.0 MB</span></h3>
+            <h4>AC 91-05: Performance Based Navigation</h4>
+            <div class="file-info">Guidelines for implementing performance-based navigation procedures</div>
+            <a href="advisory-circular-91-05-performance-based-navigation.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-05-performance-based-navigation.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-06 performance based communication surveillance">
+            <h3 class="category-title">Communications <span class="file-size">465 KB</span></h3>
+            <h4>AC 91-06: Performance Based Communication and Surveillance</h4>
+            <div class="file-info">Requirements for performance-based communication and surveillance</div>
+            <a href="advisory-circular-91-06-performance-based-communication-surveillance.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-06-performance-based-communication-surveillance.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-07 cabin electronic flight bags">
+            <h3 class="category-title">Electronic Equipment <span class="file-size">624 KB</span></h3>
+            <h4>AC 91-07: Cabin Electronic Flight Bags</h4>
+            <div class="file-info">Guidelines for cabin crew electronic flight bag usage</div>
+            <a href="advisory-circular-91-07-cabin-electronic-flight-bags.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-07-cabin-electronic-flight-bags.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-10 operations vicinity noncontrolled aerodromes">
+            <h3 class="category-title">Aerodrome Operations <span class="file-size">1.4 MB</span></h3>
+            <h4>AC 91-10: Operations in the Vicinity of Non-Controlled Aerodromes</h4>
+            <div class="file-info">Safety procedures for non-controlled aerodrome operations</div>
+            <a href="advisory-circular-91-10-operations-vicinity-noncontrolled-aerodromes.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-10-operations-vicinity-noncontrolled-aerodromes.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-11 aeroplane low visibility conduct approvals">
+            <h3 class="category-title">Low Visibility Operations <span class="file-size">927 KB</span></h3>
+            <h4>AC 91-11: Aeroplane Low Visibility Conduct Approvals</h4>
+            <div class="file-info">Requirements for low visibility approach and landing operations</div>
+            <a href="advisory-circular-91-11-aeroplane-low-visibility-conduct-approvals.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-11-aeroplane-low-visibility-conduct-approvals.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-12 conduct practice autoland operations">
+            <h3 class="category-title">Autoland Operations <span class="file-size">650 KB</span></h3>
+            <h4>AC 91-12: Conduct of Practice Autoland Operations</h4>
+            <div class="file-info">Procedures for conducting autoland training and operations</div>
+            <a href="advisory-circular-91-12-conduct-of-practice-autoland-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-12-conduct-of-practice-autoland-operations.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-14 pilots responsibility collision avoidance">
+            <h3 class="category-title">Collision Avoidance <span class="file-size">674 KB</span></h3>
             <h4>AC 91-14: Pilot's Responsibility for Collision Avoidance</h4>
             <div class="file-info">Guidance on pilot responsibilities for avoiding mid-air collisions</div>
             <a href="advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf" class="pdf-link" target="_blank">Download PDF</a>
             <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-14-pilots-responsibility-collision-avoidance.pdf</div>
         </div>
 
-        <div class="pdf-card">
-            <h3 class="category-title">Fuel Requirements</h3>
+        <div class="pdf-card" data-search="ac 91-15 aircraft fuel requirements guidelines">
+            <h3 class="category-title">Fuel Requirements <span class="file-size">1.5 MB</span></h3>
             <h4>AC 91-15: Guidelines for Aircraft Fuel Requirements</h4>
             <div class="file-info">Fuel planning and requirements for aircraft operations</div>
             <a href="advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf" class="pdf-link" target="_blank">Download PDF</a>
             <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-15-guidelines-aircraft-fuel-requirements.pdf</div>
         </div>
+
+        <div class="pdf-card" data-search="ac 91-16 wake turbulence">
+            <h3 class="category-title">Wake Turbulence <span class="file-size">983 KB</span></h3>
+            <h4>AC 91-16: Wake Turbulence</h4>
+            <div class="file-info">Understanding and managing wake turbulence hazards</div>
+            <a href="advisory-circular-91-16-wake-turbulence.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-16-wake-turbulence.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-17 electronic flight bags efb">
+            <h3 class="category-title">Electronic Equipment <span class="file-size">660 KB</span></h3>
+            <h4>AC 91-17: Electronic Flight Bags</h4>
+            <div class="file-info">Implementation and use of electronic flight bags</div>
+            <a href="advisory-circular-91-17-electronic-flight-bags.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-17-electronic-flight-bags.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-18 restraints infants children">
+            <h3 class="category-title">Passenger Safety <span class="file-size">737 KB</span></h3>
+            <h4>AC 91-18: Restraints for Infants and Children</h4>
+            <div class="file-info">Safety requirements for infant and child restraint systems</div>
+            <a href="advisory-circular-91-18-restraints-infants-children.PDF" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-18-restraints-infants-children.PDF</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-22 aircraft checklist">
+            <h3 class="category-title">Aircraft Checklists <span class="file-size">756 KB</span></h3>
+            <h4>AC 91-22: Aircraft Checklist</h4>
+            <div class="file-info">Best practices for aircraft checklist design and use</div>
+            <a href="advisory-circular-91-22-aircraft-checklist.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-22-aircraft-checklist.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-23 ads-b enhancing situational awareness">
+            <h3 class="category-title">ADS-B Technology <span class="file-size">964 KB</span></h3>
+            <h4>AC 91-23: ADS-B Enhancing Situational Awareness</h4>
+            <div class="file-info">Guidelines for ADS-B implementation and situational awareness</div>
+            <a href="advisory-circular-91-23-ads-b-enhancing-situational-awareness.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-23-ads-b-enhancing-situational-awareness.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-25 fuel oil safety">
+            <h3 class="category-title">Fuel Safety <span class="file-size">1.2 MB</span></h3>
+            <h4>AC 91-25: Fuel and Oil Safety</h4>
+            <div class="file-info">Safety procedures for fuel and oil handling operations</div>
+            <a href="advisory-circular-91-25-fuel-oil-safety.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-25-fuel-oil-safety.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 91-28 crew safety turbulence">
+            <h3 class="category-title">Crew Safety <span class="file-size">365 KB</span></h3>
+            <h4>AC 91-28: Crew Safety During Turbulence</h4>
+            <div class="file-info">Safety procedures for crew during turbulent conditions</div>
+            <a href="advisory-circular-91-28-crew-safety-during-turbulence.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-91-28-crew-safety-during-turbulence.pdf</div>
+        </div>
+
+        <!-- Dangerous Goods -->
+        <div class="pdf-card" data-search="ac 92-02 dangerous goods manuals">
+            <h3 class="category-title">Dangerous Goods <span class="file-size">145 KB</span></h3>
+            <h4>AC 92-02: Dangerous Goods Manuals</h4>
+            <div class="file-info">Requirements for dangerous goods handling and documentation</div>
+            <a href="advisory-circular-92-02-dangerous-goods-manuals.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-92-02-dangerous-goods-manuals.pdf</div>
+        </div>
+
+        <!-- Air Transport Operations -->
+        <div class="pdf-card" data-search="ac 119-01 safety management systems air transport">
+            <h3 class="category-title">Safety Management <span class="file-size">4.2 MB</span></h3>
+            <h4>AC 119-01: Safety Management Systems for Air Transport Operations</h4>
+            <div class="file-info">Comprehensive guide to implementing SMS in air transport operations</div>
+            <a href="advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-119-01-safety-management-systems-air-transport-operations.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 119-04 flight data analysis programmes fdap">
+            <h3 class="category-title">Flight Data Analysis <span class="file-size">667 KB</span></h3>
+            <h4>AC 119-04: Flight Data Analysis Programmes (FDAP) for Air Transport Operations</h4>
+            <div class="file-info">Implementation of flight data analysis programs</div>
+            <a href="advisory-circular-119-04-flight-data-analysis-programmes-fdap-for-air-transport-operations.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-119-04-flight-data-analysis-programmes-fdap-for-air-transport-operations.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 121-03 upset prevention recovery training uprt">
+            <h3 class="category-title">Training <span class="file-size">1.5 MB</span></h3>
+            <h4>AC 121-03: Upset Prevention and Recovery Training</h4>
+            <div class="file-info">Requirements for upset prevention and recovery training programs</div>
+            <a href="advisory-circular-121-03-upset-prevention-recovery-training.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-121-03-upset-prevention-recovery-training.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 135-13 prescribed single engine aeroplanes">
+            <h3 class="category-title">Single Engine Operations <span class="file-size">440 KB</span></h3>
+            <h4>AC 135-13: Prescribed Single Engine Aeroplanes</h4>
+            <div class="file-info">Requirements for single-engine commercial operations</div>
+            <a href="advisory-circular-135-13-prescribed-single-engine-aeroplanes.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-135-13-prescribed-single-engine-aeroplanes.pdf</div>
+        </div>
+
+        <!-- Aviation Communications -->
+        <div class="pdf-card" data-search="ac 171-01 aeronautical telecommunication radionavigation service providers">
+            <h3 class="category-title">Telecommunications <span class="file-size">1.0 MB</span></h3>
+            <h4>AC 171-01: Aeronautical Telecommunication and Radionavigation Service Providers</h4>
+            <div class="file-info">Requirements for aviation communication service providers</div>
+            <a href="advisory-circular-171-01-aeronautical-telecommunication-radionavigation-service-providers.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-171-01-aeronautical-telecommunication-radionavigation-service-providers.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 171-03 safety management system guidelines preparation">
+            <h3 class="category-title">SMS for Communications <span class="file-size">307 KB</span></h3>
+            <h4>AC 171-03: Guidelines for Preparation of Safety Management System</h4>
+            <div class="file-info">SMS requirements for communication service providers</div>
+            <a href="advisory-circular-171-03-guidelines-preparation-safety-management-system.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-171-03-guidelines-preparation-safety-management-system.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="ac 171-04 software aeronautical telecommunication radio navigation">
+            <h3 class="category-title">Software Systems <span class="file-size">293 KB</span></h3>
+            <h4>AC 171-04: Software and Its Use in Aeronautical Telecommunication and Radio Navigation Services</h4>
+            <div class="file-info">Software requirements for aviation communication systems</div>
+            <a href="advisory-circular-171-04-software-its-use-in-aeronautical-telecommunication-radio-navigation-services.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/advisory-circular-171-04-software-its-use-in-aeronautical-telecommunication-radio-navigation-services.pdf</div>
+        </div>
+
+        <!-- Multi-Part Advisory Circulars -->
+        <div class="pdf-card" data-search="multi-part ac 119-07 138-03 management change air transport aerial work">
+            <h3 class="category-title">Change Management <span class="file-size">978 KB</span></h3>
+            <h4>Multi-Part AC 119-07/138-03: Management of Change for Air Transport and Aerial Work Operators</h4>
+            <div class="file-info">Change management processes for aviation operators</div>
+            <a href="multi-part-advisory-circular-119-07-138-03-management-change-for-air-transport-and-aerial-work-operators.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-119-07-138-03-management-change-for-air-transport-and-aerial-work-operators.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 119-11 138-02 training checking systems">
+            <h3 class="category-title">Training Systems <span class="file-size">974 KB</span></h3>
+            <h4>Multi-Part AC 119-11/138-02: Training and Checking Systems</h4>
+            <div class="file-info">Training and checking system requirements</div>
+            <a href="multi-part-advisory-circular-119-11-ac-138-02-training-checking-systems.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-119-11-ac-138-02-training-checking-systems.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 121-05 133-04 135-08 passenger crew baggage weights">
+            <h3 class="category-title">Weight & Balance <span class="file-size">658 KB</span></h3>
+            <h4>Multi-Part AC 121-05/133-04/135-08: Passenger, Crew and Baggage Weights</h4>
+            <div class="file-info">Weight and balance calculation guidelines</div>
+            <a href="multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights-2.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-121-05-ac-133-04-ac-135-08-passenger-crew-baggage-weights-2.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 121-08 133-08 135-06 carry-on baggage">
+            <h3 class="category-title">Baggage Handling <span class="file-size">713 KB</span></h3>
+            <h4>Multi-Part AC 121-08/133-08/135-06: Carry-On Baggage</h4>
+            <div class="file-info">Carry-on baggage policies and procedures</div>
+            <a href="multi-part-advisory-circular-121-08-ac-133-08-ac-135-06-carry-on-baggage.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-121-08-ac-133-08-ac-135-06-carry-on-baggage.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 121-09 133-06 135-10 carriage special category passenger">
+            <h3 class="category-title">Special Passengers <span class="file-size">451 KB</span></h3>
+            <h4>Multi-Part AC 121-09/133-06/135-10: Carriage of Special Category Passengers</h4>
+            <div class="file-info">Requirements for transporting special category passengers</div>
+            <a href="multi-part-advisory-circular-121-09-ac-133-06-ac-135-10-carriage-special-category-passenger.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-121-09-ac-133-06-ac-135-10-carriage-special-category-passenger.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 121-10 133-07 135-11 passengers seated emergency exit">
+            <h3 class="category-title">Emergency Exits <span class="file-size">371 KB</span></h3>
+            <h4>Multi-Part AC 121-10/133-07/135-11: Passengers Seated at Emergency Exits</h4>
+            <div class="file-info">Requirements for passengers seated at emergency exits</div>
+            <a href="multi-part-advisory-circular-121-10-ac-133-07-ac-135-11-passengers-seated-emergency-exit.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-121-10-ac-133-07-ac-135-11-passengers-seated-emergency-exit.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 139-05 171-05 172-03 all weather operations aerodromes">
+            <h3 class="category-title">All Weather Operations <span class="file-size">2.6 MB</span></h3>
+            <h4>Multi-Part AC 139-05/171-05/172-03: All Weather Operations at Aerodromes</h4>
+            <div class="file-info">Comprehensive guide to all-weather aerodrome operations</div>
+            <a href="multi-part-advisory-circular-139-05-171-05-172-03-all-weather-operations-aerodromes.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-139-05-171-05-172-03-all-weather-operations-aerodromes.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 91-19 121-04 133-10 135-12 138-10 passenger safety information">
+            <h3 class="category-title">Passenger Safety <span class="file-size">1.6 MB</span></h3>
+            <h4>Multi-Part AC 91-19/121-04/133-10/135-12/138-10: Passenger Safety Information</h4>
+            <div class="file-info">Requirements for passenger safety briefings and information</div>
+            <a href="multi-part-advisory-circular-91-19-ac-121-04-ac-133-10-ac-135-12-ac-138-10-passenger-safety-information.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-91-19-ac-121-04-ac-133-10-ac-135-12-ac-138-10-passenger-safety-information.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 91-30 121-12 133-03 135-14 emergency locator transmitters elt">
+            <h3 class="category-title">Emergency Equipment <span class="file-size">321 KB</span></h3>
+            <h4>Multi-Part AC 91-30/121-12/133-03/135-14: Emergency Locator Transmitters</h4>
+            <div class="file-info">Requirements for emergency locator transmitter systems</div>
+            <a href="multi-part-advisory-circular-91-30-ac-121-12-ac-133-03-ac-135-14-emergency-locator-transmitters.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-91-30-ac-121-12-ac-133-03-ac-135-14-emergency-locator-transmitters.pdf</div>
+        </div>
+
+        <div class="pdf-card" data-search="multi-part ac 91-32 139-22 global reporting format runway surface condition grf">
+            <h3 class="category-title">Runway Conditions <span class="file-size">2.3 MB</span></h3>
+            <h4>Multi-Part AC 91-32/139-22: Global Reporting Format for Runway Surface Conditions</h4>
+            <div class="file-info">Global standards for runway surface condition reporting</div>
+            <a href="multi-part-advisory-circular-91-32-and-139-22-global-reporting-format-runway-surface-condition.pdf" class="pdf-link" target="_blank">Download PDF</a>
+            <div class="copy-link" onclick="copyToClipboard(this)">https://projectmanuals.github.io/GitHub-pages-test/multi-part-advisory-circular-91-32-and-139-22-global-reporting-format-runway-surface-condition.pdf</div>
+        </div>
     </div>
 
     <div class="ai-access-section">
-        <h3>How to Use with AI Tools:</h3>
+        <h3>📋 How to Use with AI Tools:</h3>
         <ol>
-            <li>Click on any gray link box above to copy the URL</li>
+            <li>Use the search box above to find specific documents</li>
+            <li>Click on any gray link box to copy the URL automatically</li>
             <li>Paste the copied link directly into your AI conversation</li>
-            <li>The AI will then be able to download and analyze the full PDF content</li>
+            <li>The AI will download and analyze the complete PDF content</li>
         </ol>
-        <p><strong>Note:</strong> Make sure all PDF files are uploaded to the same directory as this index.html file</p>
+        <p><strong>Note:</strong> All PDF files must be uploaded to the same directory as this index.html file on your GitHub Pages repository.</p>
     </div>
 
     <script>
@@ -166,6 +543,33 @@
                     element.style.borderColor = '#dee2e6';
                 }, 1000);
             });
+        }
+
+        function filterDocuments() {
+            const searchTerm = document.getElementById('searchBox').value.toLowerCase();
+            const cards = document.querySelectorAll('.pdf-card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const searchData = card.getAttribute('data-search').toLowerCase();
+                const title = card.querySelector('h4').textContent.toLowerCase();
+                const description = card.querySelector('.file-info').textContent.toLowerCase();
+                
+                if (searchData.includes(searchTerm) || title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update stats
+            const statsDiv = document.querySelector('.stats');
+            if (searchTerm) {
+                statsDiv.innerHTML = `<strong>🔍 Search Results: ${visibleCount} documents found</strong> | <strong>📁 Total Available: 47 PDF Files</strong>`;
+            } else {
+                statsDiv.innerHTML = '<strong>📁 Total Documents: 47 PDF Files</strong> | <strong>📊 Total Size: ~45.2 MB</strong> | <strong>🔄 Last Updated: June 1, 2025</strong>';
+            }
         }
     </script>
 </body>
